@@ -1,0 +1,299 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><title>{Title}</title>
+<link rel="shortcut icon" href="{Favicon}">
+<link rel="alternate" type="application/rss+xml" href="{RSS}">
+{block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
+
+        <meta name="color:postBackground" content="#ffffff"/>
+        <meta name="color:postBorder" content="#ffffff"/>
+        <meta name="color:Text" content="#838282"/>
+        <meta name="color:Link" content="#b8b8b8"/>
+        <meta name="image:sidebar" content=""/>
+        
+        
+        <meta name="text:link 1 title" content=""/>
+        <meta name="text:link 2 title" content=""/>
+        <meta name="text:link 3 title" content=""/>
+        <meta name="text:link 4 title" content=""/>
+        
+        <meta name="text:link 1 url" content=""/>
+        <meta name="text:link 2 url" content=""/>
+        <meta name="text:link 3 url" content=""/>
+        <meta name="text:link 4 url" content=""/>
+
+
+
+        <style type="text/css">
+
+            
+            body {
+                
+                margin: 0 auto !important;
+                width:600px;
+                height:500px;
+                font-family:comic sans ms;
+                font-size:10px;
+                background-image:url("https://i.ytimg.com/vi/T40NSkd7Olc/maxresdefault.jpg");
+                color:{color:text};
+            }
+            
+            a {
+                font-family:comic sans ms;
+                color:{color:link};
+                text-decoration:none;
+            }
+            
+            a:hover {
+                text-decoration:underline;    
+            
+            }
+            
+.desc {
+padding-top:5px;
+
+text-align:center;
+width:120px;
+padding-bottom:20px;
+Background-color:#494B84;
+-moz-transition: all 0.5s ease-in-out;
+-webkit-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+position:fixed;
+opacity:0.2;
+margin-top:190px;
+}
+
+#sidebar:hover .desc {
+opacity:0.8;
+}
+
+
+            #entries {
+                padding:20px;
+                width:600px;
+                margin-right:400px
+                
+            }
+            
+            #post {
+                Background-color:{color:postBackground};
+                width:500px;
+                margin-left:170px;
+                padding:10px;
+                text-align:center;
+                border:2px solid {color:postBorder};
+            }
+            
+
+            
+            #sidebar {
+                background-image:url("http://orig02.deviantart.net/ab7b/f/2012/257/0/4/tardis__flat_colors_by_sorceress2000-d5engcx.png"); 
+                background-size:120px 180px;
+                background-repeat:no-repeat;
+                margin-top:50px;
+                height:100%;
+                width:200px;
+                position:fixed;
+                text-align:center;
+                border-radius:0px;
+            
+            }
+
+#slideout {
+    margin-top:55px;
+    margin-left:99px;
+    position: fixed;
+    width: 45px;
+    padding: 5px 0;
+    text-align: center;
+    background: #494B84;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    -webkit-border-radius: 0 5px 5px 0;
+    -moz-border-radius: 0 5px 5px 0;
+    border-radius: 0 5px 5px 0;
+}
+#slideout_inner {
+    position: fixed;
+    text-align: center;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    text-align: left;
+    -webkit-border-radius: 0 0 5px 0;
+    -moz-border-radius: 0 0 5px 0;
+    border-radius: 0 0 5px 0;
+}
+#slideout:hover {
+    width:80px;
+    text-align:right;
+    padding-right:5px;
+}
+
+            #title {
+                font-size:25px;
+                text-align:center;
+                margin-bottom:5px;
+                Margin-top:10px;
+            }
+            
+            
+            #description {
+                font-size:13px;
+                padding:5px;
+                text-align:center;
+            }
+            
+            #pagination {
+                font-size:10px;
+                text-align:center;
+                Background-color:#494B84;
+                margin-top:500px;
+                width:120px;
+                position:fixed;
+                border-radius:0px;
+            }
+            #th {
+                font-size:10px;
+                text-align:center;
+                Background-color:#494B84;
+                margin-top:550px;
+                width:120px;
+                position:fixed;
+                border-radius:0px;
+            }
+            #info {
+                text-align:center;
+                margin-top:10px;
+            }
+            #notes {
+                text-align:center;
+                margin-right:200;
+            }
+            
+            #asker {
+                float:left;
+                margin-right:5px;
+            }
+        </style>
+    </head>
+    <body>
+
+<div id="sidebar">
+<div class="desc">{description}</div>
+    <div id="slideout">
+    <div id=sideout_inner>
+        {Title}<br>
+        <a href="/">Home</a><br>
+        {block:iflink1title}<a href="{text:link 1 url}">{text:link 1 title}</a>{/block:iflink1title}
+<br>
+        {block:iflink2title}<a href="{text:link 2 url}">{text:link 2 title}</a>{/block:iflink2title}
+<br>
+        {block:iflink3title}<a href="{text:link 3 url}">{text:link 3 title}</a>{/block:iflink3title}
+<br>
+        {block:iflink4title}<a href="{text:link 4 url}">{text:link 4 title}</a>{/block:iflink4title}
+<br>
+    </div>
+    </div>
+
+
+{block:HasPages}{block:Pages}<a href="{url}">{Label}</a>{/block:Pages}{/block:HasPages}
+<div id="pagination">
+{block:Pagination}{block:PreviousPage}<a href="{PreviousPage}">Go Back<br>///<br></a>{/block:PreviousPage}
+{block:NextPage}<a href="{NextPage}">Go Forth</a>{/block:NextPage}{/block:Pagination}
+
+</div>
+
+<div id="th"><a href"ashthenerdiestnerd.tumblr.com">Theme Made by Ash</a></div>
+</div>
+
+<div id="entries">
+
+{block:Posts}
+
+
+<div id="post">
+
+{block:Title}{Title}{/block:Title}
+
+{block:Text}{Body}{/block:Text}
+
+{block:Photo}
+<a href="{permalink}"><img src="{PhotoURL-500}" width="500"/></a>
+{/block:Photo}
+
+{block:Photoset}
+{Photoset-500}
+{/block:Photoset}
+
+
+{block:Quote}
+{Quote}
+<div align="right">
+{block:Source}-{Source}{/block:Source}
+</div>
+{/block:Quote}
+
+
+{block:Video}
+{Video-500}<br>
+{PlayCountWithLabel}
+{/block:Video}
+
+
+{block:Link}
+<a href="{URL}" class="link" {Target}>{Name}</a><BR>
+{block:Description}{Description}{/block:Description}
+{/block:Link}
+
+{block:Chat}
+{block:Lines}
+{block:Label}
+<br>{Label}
+{/block:Label}
+&nbsp;{Line}
+{/block:Lines}
+{/block:Chat}
+
+{block:Audio}
+{AudioPlayerGrey}
+<br><div align="right">{block:Artist}
+Artist: {Artist}</div>
+{/block:Artist}<br>
+{block:Caption}{Caption}{/block:Caption}
+{/block:Audio}
+
+
+{block:Answer}
+{Asker} asked <b>{Question}</b><Br>
+{Answer}
+{/block:Answer}
+
+
+{block:Caption}
+{Caption}
+{/block:Caption}
+<a href="{Permalink}">
+{b
+lock:Date}{lang:Posted TimeAgo}{/block:Date}
+{block:NoteCount} with {NoteCountWithLabel}{/block:NoteCount}
+</a>
+<br>
+{block:PermalinkPage}
+{block:NoteCount}
+{NoteCount} notes
+{/block:NoteCount}
+<Br>
+{block:PostNotes}{PostNotes}{/block:PostNotes}</div>
+{/block:PermalinkPage}
+</div>
+
+{/block:Posts}
+
+</div>
+    </body>
+</html>
